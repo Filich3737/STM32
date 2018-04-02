@@ -268,7 +268,7 @@ void toggle_cursor(void)
     }
 }
 
-void Perif_init()
+void Periph_init()
 {
     LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOD);
 
@@ -344,7 +344,7 @@ void time_update_WHILE(void)
 int
 main(void) {
     SystemClock_Config();
-    Perif_init();
+    Periph_init();
     LL_GPIO_SetPinMode(GPIOD, LL_GPIO_PIN_14, LL_GPIO_MODE_OUTPUT);
     LCD_init();
     while (1){
